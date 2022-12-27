@@ -1,4 +1,18 @@
 *,
+
+:root { 
+  --tl-background:  #00ff00 !important; 
+}
+
+#HamburgerMenuIcon,
+#DrawButton,
+#UndoButton,
+#RedoButton,
+#ClearButton
+  {
+  background: #00ff00 !important;
+}
+
 html {
   box-sizing: border-box;
 }

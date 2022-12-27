@@ -8,7 +8,7 @@ export function Panel() {
 
   return (
     <>
-      <div className={[styles.top, styles.center].join(' ')}>
+      {/* <div className={[styles.top, styles.center].join(' ')}>
         <a
           href="https://github.com/steveruizok/perfect-freehand"
           target="_blank"
@@ -16,13 +16,13 @@ export function Panel() {
         >
           perfect-freehand
         </a>
-      </div>
+      </div> */}
       <div className={[styles.container, styles.top, styles.left].join(' ')}>
-        <a onClick={app.togglePanelOpen}>
+        <a id="HamburgerMenuIcon" onClick={app.togglePanelOpen}>
           <HamburgerMenuIcon height={24} width={24} color="black" />
         </a>
       </div>
-      <div className={[styles.container, styles.top, styles.right].join(' ')}>
+      {/* <div className={[styles.container, styles.top, styles.right].join(' ')}>
         <a
           href="https://github.com/steveruizok/perfect-freehand"
           target="_blank"
@@ -30,27 +30,27 @@ export function Panel() {
         >
           <GitHubLogoIcon height={24} width={24} />
         </a>
-      </div>
+      </div> */}
       <div className={[styles.container, styles.bottom, styles.left].join(' ')}>
-        <button
+        <button id="DrawButton"
           onClick={app.selectDrawingTool}
           data-active={tool === 'drawing'}
         >
           Draw
         </button>
-        {/* <button
+{/*         {<button
           onClick={app.selectErasingTool}
           data-active={tool === 'erasing'}
         >
           Erase
-        </button> */}
+        </button>} */}
       </div>
       <div
         className={[styles.container, styles.bottom, styles.right].join(' ')}
       >
-        <button onClick={app.undo}>Undo</button>
-        <button onClick={app.redo}>Redo</button>
-        <button onClick={app.resetDoc}>Clear</button>
+        <button id="UndoButton" onClick={app.undo}>Undo</button>
+        <button id="RedoButton" onClick={app.redo}>Redo</button>
+        <button id="ClearButton" onClick={app.resetDoc}>Clear</button>
       </div>
     </>
   )
